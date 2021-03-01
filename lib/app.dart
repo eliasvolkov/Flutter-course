@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quize_app/quiz.dart';
-import 'finish.dart';
 
 class App extends StatefulWidget {
   @override
