@@ -15,7 +15,11 @@ class _AppState extends State<App> {
         appBar: AppBar(
           title: Text("Flutter App"),
         ),
-        body: UserTransaction(),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [UserTransaction()],
+          ),
+        ),
       ),
     );
   }
