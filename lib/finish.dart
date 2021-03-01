@@ -6,7 +6,7 @@ class Finish extends StatelessWidget {
   final Function goBack;
 
 
-  Finish(this.goBack);
+  Finish({@required this.goBack});
 
 
   @override

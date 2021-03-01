@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quize_app/answer.dart';
-import 'package:quize_app/question.dart';
+import 'package:quize_app/quiz.dart';
 import 'finish.dart';
 
 class App extends StatefulWidget {
@@ -22,7 +21,7 @@ class _AppState extends State<App> {
     },
   ];
 
-  void _onAnswer() {
+  void _answerQuestion() {
     setState(() {
       _questionIndex++;
     });
@@ -43,18 +42,11 @@ class _AppState extends State<App> {
           title: Text("Quize App"),
         ),
         body: _questionIndex < questions.length
-            ? Center(
-                child: Column(
-                  children: <Widget>[
-                    Question(questions[_questionIndex]['question']),
-                    ...(questions[_questionIndex]['answers'] as List<String>)
-                        .map((answer) {
-                      return Answer(answer, _onAnswer);
-                    }).toList()
-                  ],
-                ),
-              )
-            : Finish(_onGoBack),
+            ? Quiz(
+                questions: questions,
+                questionIndex: _questionIndex,
+                answerQuestion: _answerQuestion)
+            : Finish(goBack: _onGoBack),
       ),
     );
   }
