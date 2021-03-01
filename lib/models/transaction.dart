@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 class Transaction {
-  final int id;
+  final String id;
   final double amount;
   final String title;
   final DateTime date;
