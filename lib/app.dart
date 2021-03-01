@@ -28,7 +28,7 @@ class _AppState extends State<App> {
     });
   }
 
-  void _onGoBack(){
+  void _onGoBack() {
     setState(() {
       _questionIndex = 0;
     });

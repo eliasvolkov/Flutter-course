@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 class Finish extends StatelessWidget {
-  Function goBack;
+  final Function goBack;
 
 
   Finish(this.goBack);
